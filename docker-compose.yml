@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    container_name: app-kamranjafari
+    tty: true
+    volumes:
+      - ${BASE_PATH}:/home/app/
+    env_file:
+      - .env
+
+volumes:
+  app-vol:
